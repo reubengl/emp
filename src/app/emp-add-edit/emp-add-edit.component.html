@@ -1,0 +1,60 @@
+<div mat-dialog-title><h1>Employee Form</h1></div>
+<div mat-dialog-content class="content">
+  <div class="row">
+    <mat-form-field appearance="outline">
+      <mat-label>First Name</mat-label>
+      <input matInput type="text" placeholder="Ex.ret" />
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Middle Name</mat-label>
+      <input matInput type="text" placeholder="Optional" />
+    </mat-form-field>
+
+    
+  </div>
+  <div class="row">
+    <mat-form-field appearance="outline">
+      <mat-label>Last Name</mat-label>
+      <input matInput type="text" placeholder="Ex.Ren" />
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+        <mat-label>Email</mat-label>
+        <input matInput type="email" placeholder="Ex. test@gmail.com" formControlName="email">
+    </mat-form-field>
+        </div>
+        <div class="row">
+         
+          <mat-form-field appearance="outline">
+            <mat-label>Date of birth</mat-label>
+            <input matInput type="date" placeholder="dob" />
+          </mat-form-field>
+          <mat-form-field appearance="outline">
+            <mat-label>Date of joining</mat-label>
+            <input matInput type="date" placeholder="doj" />
+          </mat-form-field>
+      
+      </div>
+      
+      <div class="row">
+        <mat-form-field appearance="outline">
+          <mat-label>Date of resignation(active:Blank)</mat-label>
+          <input matInput type="date" placeholder="dor" />
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+          <mat-label>Designation</mat-label>
+          <mat-select formControlName="designation">
+              <mat-option *ngFor="let val of designation" [value]="val">{{val}}
+              </mat-option>
+          </mat-select>
+      </mat-form-field>
+        
+        
+    </div>
+
+
+  <div mat-dialog-actions>
+    <button mat-raised-button>Cancel</button
+    ><button mat-raised-button color="primary">Save</button>
+  </div>
+</div>
